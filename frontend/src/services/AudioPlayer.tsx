@@ -18,6 +18,7 @@ class AudioPlayer {
 
     ensureSilence() {
         if (this.audioRef) {
+            this.audioRef.dispatchEvent(new Event('ended'));
             this.audioRef.pause();
         }
     }
