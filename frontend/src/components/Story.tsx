@@ -4,6 +4,9 @@ import { StoryDataType } from "../types";
 import axios from 'axios';
 import handleError from "../utils/errors";
 
+import './Story.css';
+import PlayButton from "./PlayButton";
+
 
 type StoryPropsType = {
     id: string,
@@ -23,7 +26,6 @@ function Story({ id }: StoryPropsType) {
                     `/api/news/private/event/${id}/summary`,
                     DEFAULT_CONFIG
                 );
-                debugger;
                 setData(res.data);
             } catch (err) {
                 handleError(err);
@@ -37,9 +39,14 @@ function Story({ id }: StoryPropsType) {
     }
 
     return (
-        <section>
-            <h2>{data.title}</h2>
-            <p>{data.description}</p>
+        <section className="story">
+            <div className="story-header">
+                <h3 className="story-title">{data.title}</h3>
+                <div className="story-header-right">
+                    <PlayButton url={data.audioUrl} />
+                </div>
+            </div>
+            <p className="story-p">{data.description}</p>
         </section>
     )
 }

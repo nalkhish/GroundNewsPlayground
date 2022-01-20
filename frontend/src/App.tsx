@@ -1,11 +1,15 @@
 import React from 'react';
 import TopStories from './components/TopStories';
+import './App.css';
+
 
 function App() {
 
 
     return (
-        <TopStories />
+        <div className="app">
+            <TopStories />
+        </div>
     );
 }
 
