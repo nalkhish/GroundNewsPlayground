@@ -3,51 +3,59 @@
 
 const summaries = [
     {
-        id: 1,
+        id: "e5d990e4-c1b0-4585-abca-a646b659d39b",
+        title: "Texas Congressman Henry Cuellar's Home Is Searched by FBI",
         blindspotData: {
-            coverageProfileStatement: "This news story only has <b>13% left</b> political bias coverage",
+            coverageProfileStatement: "This news story only has <b>23% right</b> political bias coverage",
         },
-        description: "U.S. stocks gave up early gains and turned lower, extending a recent stretch of losses that have pulled major indexes lower to start the year.",
-        audioUrl: "",
+        description: "FBI agents raided the Laredo residence of Rep. Henry Cuellar, Texas Democrat, Wednesday night, the congressman’s office confirmed.",
+        audioUrl: "aStringToPreventReSynthesis",
     },
     {
-        id: 2,
+        id: "53bda91c-4165-477d-b1e9-9a4877da61d5",
+        title: "Biden says Russia likely to invade Ukraine",
         blindspotData: {
-            coverageProfileStatement: "This news story only has <b>23% center</b> political bias coverage",
+            coverageProfileStatement: "This news story only has <b>28% right</b> political bias coverage",
         },
-        description: "Sajid Javid has told the public we \"must learn to live with Covid\" - but emphasised the need to \"stay vigilant\".",
-        audioUrl: "",
+        description: "President Joe Biden predicted Wednesday that Russia will invade Ukraine, just as the United States launched a fresh effort to resolve the standoff and Moscow continued to mass troops on its neighbor's doorstep.",
+        audioUrl: "aStringToPreventReSynthesis",
     },
     {
-        id: 3,
+        id: "5be49aac-deb1-4eba-a6d0-fcd9e6525db4",
+        title: "Jan. 6 committee subpoenas leaders of 'America First' movement",
         blindspotData: {
-            coverageProfileStatement: "This news story only has <b>22% right</b> political bias coverage",
+            coverageProfileStatement: "This news story only has <b>12% center</b> political bias coverage",
         },
-        description: "Pasadena police arrested Brianna Kupfer's alleged killer Wednesday just a day after Los Angeles authorities released his identity.",
-        audioUrl: "",
+        description: "The panel investigating the Jan. 6 insurrection on Wednesday subpoenaed two fringe far-right figures, known for spreading misinformation about the results of the 2020 election and urging Republicans to overturn it.",
+        audioUrl: "aStringToPreventReSynthesis",
     },
     {
-        id: 4,
-        blindspotData: {
-            coverageProfileStatement: "This news story only has <b>21% center</b> political bias coverage",
-        },
-        description: "A man has been charged over the death of primary school teacher Ashling Murphy in Ireland.",
-        audioUrl: "",
-    },   
-    {
-        id: 5,
+        id: "b353e0a9-977c-4c7e-ab1c-32b89f422214",
+        title: "Supreme Court rejects Trump's bid to shield records from Jan. 6 committee",
         blindspotData: {
             coverageProfileStatement: "This news story only has <b>11% right</b> political bias coverage",
         },
-        description: "Donald Trump plans to build 2,300 luxury homes at his Doral golf resort in the Miami area. The club is the biggest revenue generator in his golf business, but has suffered from a one-two punch of a divisive presidency and coronavirus shutdowns. The Trump Organization's plans for Doral are part of a string of recent business moves after months of relative quiet.",
-        audioUrl: "",
+        description: "The Supreme Court on Wednesday rejected former President Trump's bid to block a trove of his administration's records from being handed to the Jan. 6 House committee.",
+        audioUrl: "aStringToPreventReSynthesis",
+    },   
+    {
+        id: "f9cd2f68-95f1-4185-962b-a63c079d4a88",
+        title: "Biden defends his first year record as agenda stalls: ‘I didn’t overpromise’",
+        blindspotData: {
+            coverageProfileStatement: "This news story only has <b>28% right</b> political bias coverage",
+        },
+        description: "Facing high daily Covid cases, major legislative defeats in Washington and a souring U.S. electorate, President Joe Biden on Wednesday defended his course of action in his first year in office.",
+        audioUrl: "aStringToPreventReSynthesis",
     },
 ]
 
 
 /** Dummy fetch summary from database */ 
 const getSummary = (id) => {
-    return summaries.find((summary) => summary.id === parseInt(id))
+    return summaries.find((summary) => summary.id === id)
 }
 
-module.exports = getSummary;
+/** Dummy fetch top summaries; returning all */
+const getTopSummaries = () => summaries;
+
+module.exports = { getSummary, getTopSummaries };
