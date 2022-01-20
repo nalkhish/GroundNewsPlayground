@@ -1,0 +1,24 @@
+.story {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0.5rem;
+    padding: 0.25rem 1rem;
+    background-color: var(--background-main);
+}
+.story-header {
+    display: flex;
+}
+.story-header-right {
+    margin-left: auto;
+}
+.story-title {
+    font-size: 1.4rem;
+}
+.story-p {
+    color: rgb(100, 100, 100);
+    font-size: 1rem;
+}
+
+.story:hover {
+    background-color: var(--background-main-darker-1);
+}

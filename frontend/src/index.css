@@ -1,3 +1,19 @@
-body {
+:root {
+    --background-main: rgb(235,235,235);
+    --background-main-darker-1: rgb(200,200,200);
+    --background-main-darker-2: rgb(177, 177, 177);
+}
 
+body {
+    background-color: var(--background-main);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }

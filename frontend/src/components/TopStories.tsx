@@ -2,7 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { DEFAULT_CONFIG } from "../constants";
 import handleError from "../utils/errors";
+import Divider from "./Divider";
 import Story from "./Story";
+import './TopStories.css';
 
 /** A list of the top stories right now
  * 
@@ -25,15 +27,20 @@ function TopStories() {
     }, [])
 
     return (
-        <ul>
-            {ids.map((id) => {
-                return (
-                    <li key={id}>
-                        <Story id={id} />
-                    </li>
-                )
-            })}
-        </ul>
+        <section>
+            <Divider>
+                <h2>Top news stories</h2>
+            </Divider>
+            <ul className="top-stories">
+                {ids.map((id) => {
+                    return (
+                        <li key={id}>
+                            <Story id={id} />
+                        </li>
+                    )
+                })}
+            </ul>
+        </section>
     )
 
 }

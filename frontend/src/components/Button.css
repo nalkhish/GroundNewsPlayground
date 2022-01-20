@@ -1,0 +1,17 @@
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--background-main-darker-1);
+    border: var(--background-main-darker-1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-play {
+    max-height: 2rem;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--background-main-darker-2);
+}
